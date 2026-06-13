@@ -210,7 +210,7 @@
             var wInt = parseInt(item.weight);
             if (wSel !== "all") {
                 if (isNaN(wInt)) return;
-                if (wSel === "light" && wInt > 42) return;
+                if (wSel === "light" && wInt > 42) return; 
                 if (wSel === "normal" && (43 > wInt || wInt > 49)) return;
                 if (wSel === "heavy" && 50 > wInt) return;
             }
@@ -231,7 +231,7 @@
             var safeName = sw.name.replace(/'/g, "&#39;"); // 데이터에 '가 있어 오류가 나니 html전용? ' 문자인 &#39;로 바꿈
             html += "<tr>"; //html이라는 변수에 앞에 html코드에서 실행되어야 할 코드들을 넣어서 html로 전송
             html += "<td>[" + sw.brand + "] " + sw.name + " <button class='copy-btn' data-name='" + safeName + "' onclick='copyText(this)'>복사</button></td>";
-            html += "<td>" + sw.tags.join(", ") + "</td>";
+            html += "<td>" + sw.tags.map(tag =>`<span class="tag ${tag}">${tag}</span>`).join("") + "</td>";
             html += "<td>" + sw.weight + "</td>";
             html += "</tr>";
         });
@@ -288,7 +288,7 @@
             var safeName = ms.name.replace(/'/g, "&#39;");
             html += "<tr>";
             html += "<td>[" + ms.brand + "] " + ms.name + " <button class='copy-btn' data-name='" + safeName + "' onclick='copyText(this)'>복사</button></td>";
-            html += "<td>" + ms.conn.join("/") + " | " + ms.hz + " (버튼 " + ms.buttons + "개)</td>";
+            html += "<td>" + ms.conn.map(conn => `<span class="tag ${conn}">${conn}</span>`).join("") + ` <span class="tag hz-${ms.hz}">${ms.hz}</span>` + ` <span class="tag buttons">${ms.buttons}개</span>` + "</td>";
             html += "<td>" + ms.weight + "g</td>";
             html += "</tr>";
         });
