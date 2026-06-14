@@ -102,7 +102,8 @@ th { background: #eee; }
 }
 .tooltip { 
   position: relative; 
-  cursor: help; 
+  cursor: help;
+  text-decoration: underline;
 }
 .tooltip .tooltiptext {
   display: none;       /* 평소에는 숨김 */
