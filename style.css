@@ -33,70 +33,83 @@ th { background: #eee; }
 
 .리니어 {
     background: #dbeafe;
-    color: #1e40af;
+    color: #0029af;
 }
 
 .택타일 {
     background: #ffeed5;
-    color: #ff9900;
+    color: #b46c00;
 }
 
 .클릭 {
     background: #fee2e2;
-    color: #b91c1c;
+    color: #aa0000;
 }
 
 .저소음 {
-    background: #aaffcc;
-    color: #166534;
+    background: #baffd6;
+    color: #00a941;
 }
 
 .자석축 {
-    background: #ddb7ff;
-    color: #7e22ce;
+    background: #e3c3ff;
+    color: #5b00ab;
 }
 
 .멤브레인 {
-    background: #e5e7eb;
-    color: #374151;
+    background: #c7daff;
+    color: #0042ac;
 }
 
 .블루투스 {
-    background: #dbeafe;
-    color: #1e40af;
+    background: #c9e0ff;
+    color: #0028ac;
 }
 
 .무선 {
-    background: #dcfce7;
-    color: #166534;
+    background: #ceffdf;
+    color: #00ad42;
 }
 
 .유선 {
-    background: #ede9fe;
-    color: #6d28d9;
+    background: #d3c9ff;
+    color: #3f00a5;
 }
 
 .hz-1K {
-    background: #fbf3d3;
-    color: #e27522;
+    background: #fff4c9;
+    color: #ab4a00;
 }
 
 .hz-2K {
     background: #fef3c7;
-    color: #b45309;
+    color: #a84900;
 }
 
 .hz-4K {
-    background: #ffddb5;
-    color: #c2410c;
+    background: #ffe6ca;
+    color: #a32e00;
 }
 
 .hz-8K {
-    background: #ffc27d;
-    color: #b91c1c;
+    background: #ffe4c5;
+    color: #ae0000;
 }
 
 .buttons {
     background: #e8eeff;
     color: #374151;
+}
+.tooltip { 
+  position: relative; 
+  cursor: help; 
+}
+.tooltip .tooltiptext {
+  display: none;       /* 평소에는 숨김 */
+  position: absolute;  /* 글자 위에 띄우기 위해 고정 */
+  bottom: 120%; left: 0;
+  background: #fff; border: 1px solid #ccc; padding: 8px; width: 140px; font-size: 12px; z-index: 10;
+}
+.tooltip:hover .tooltiptext {
+  display: block;      /* 마우스 올리면 즉시 나타남 */
 }
