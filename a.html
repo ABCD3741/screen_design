@@ -39,22 +39,26 @@
     <div class="filter-box">
         <div class="filter-row">
             <span class="filter-title">주요 특성</span>
-            <div class="grp">저소음: 
+            <div class="grp ">
+                <span class="저소음">저소음</span>
                 <label><input type="radio" name="f-silent" value="must" onchange="runKbFilter()">포함</label>
                 <label><input type="radio" name="f-silent" value="any" checked onchange="runKbFilter()">무관</label>
                 <label><input type="radio" name="f-silent" value="never" onchange="runKbFilter()">제외</label>
             </div>
-            <div class="grp">클릭: 
+            <div class="grp">
+                <span class="클릭">클릭</span>
                 <label><input type="radio" name="f-clicky" value="must" onchange="runKbFilter()">포함</label>
                 <label><input type="radio" name="f-clicky" value="any" checked onchange="runKbFilter()">무관</label>
                 <label><input type="radio" name="f-clicky" value="never" onchange="runKbFilter()">제외</label>
             </div>
-            <div class="grp">택타일: 
+            <div class="grp">
+                <span class="택타일">택타일</span>
                 <label><input type="radio" name="f-tactile" value="must" onchange="runKbFilter()">포함</label>
                 <label><input type="radio" name="f-tactile" value="any" checked onchange="runKbFilter()">무관</label>
                 <label><input type="radio" name="f-tactile" value="never" onchange="runKbFilter()">제외</label>
             </div>
-            <div class="grp">리니어: 
+            <div class="grp">
+                <span class="리니어">리니어</span>
                 <label><input type="radio" name="f-linear" value="must" onchange="runKbFilter()">포함</label>
                 <label><input type="radio" name="f-linear" value="any" checked onchange="runKbFilter()">무관</label>
                 <label><input type="radio" name="f-linear" value="never" onchange="runKbFilter()">제외</label>
@@ -62,8 +66,8 @@
         </div>
         <div class="filter-row">
             <span class="filter-title">기타 방식</span>
-            <label><input type="checkbox" id="mag-cb" onchange="runKbFilter()"> 자석축</label>
-            <label><input type="checkbox" id="mem-cb" onchange="runKbFilter()"> 멤브레인</label>
+            <label><input type="checkbox" id="mag-cb" onchange="runKbFilter()"><span class="자석축">자석축</span></label>
+            <label><input type="checkbox" id="mem-cb" onchange="runKbFilter()"><span class="멤브레인">멤브레인</span></label>
         </div>
         <div class="filter-row">
             <span class="filter-title">키압 제한</span>
