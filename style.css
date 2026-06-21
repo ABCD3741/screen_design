@@ -8,8 +8,8 @@ body { padding: 20px; max-width: 1100px; margin: 0 auto; background: #ffffff}
 .filter-box { background: #f1faff; border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 7px; }
 .filter-row { margin-bottom: 12px; display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
 .filter-title { font-weight: bold; min-width: 80px; }
-.grp { border: 1px solid #ccc; padding: 4px 8px; background: #fff; font-size: 13px; border-radius: 5px; }
-.result-count { font-weight: bold; text-align: right; margin-bottom: 5px; }
+.grp { border: 1px solid #ccc; padding: 4px 8px; background: #fff; font-size: 13px; }
+.result-count { font-weight: bold; text-align: right; margin-bottom: 5px;}
 table { width: 100%; border-collapse: collapse; margin-top: 10px; }
 th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
 th { background: #eee; }
@@ -22,147 +22,18 @@ th { background: #eee; }
 .form-btn:hover { background: #111; }
 .screen-tip { font-size: 12px; color: #666; margin-top: -10px; margin-bottom: 15px; }
 .disclaimer { margin-top: 60px; font-size: 13px; color: #777; line-height: 1.6; }
-.tag {
-    display: inline-block;
-    margin: 2px;
-}
-
-.리니어 {
-    background: #dbeafe;
-    color: #0029af;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.택타일 {
-    background: #ffeed5;
-    color: #b46c00;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.클릭 {
-    background: #fee2e2;
-    color: #aa0000;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.저소음 {
-    background: #baffd6;
-    color: #00a941;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.자석축 {
-    background: #e3c3ff;
-    color: #5b00ab;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.멤브레인 {
-    background: #c7daff;
-    color: #0042ac;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.블루투스 {
-    background: #c9e0ff;
-    color: #0028ac;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.무선 {
-    background: #ceffdf;
-    color: #00ad42;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.유선 {
-    background: #d3c9ff;
-    color: #3f00a5;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.hz-1K {
-    background: #fff4c9;
-    color: #ab4a00;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.hz-2K {
-    background: #fef3c7;
-    color: #a84900;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.hz-4K {
-    background: #ffe6ca;
-    color: #a32e00;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.hz-8K {
-    background: #ffe4c5;
-    color: #ae0000;
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.buttons {
-    background: #e8eeff;
-    color: #374151;
-    padding: 2px 6px;
-    font-weight: 600;
-    border-radius: 5px;
-    font-size: 12px;
-}
-.tooltip { 
-  position: relative; 
-  cursor: help;
-  text-decoration: underline;
-}
-.tooltip .tooltiptext {
-  display: none;       /* 평소에는 숨김 */
-  position: absolute;  /* 글자 위에 띄우기 위해 고정 */
-  bottom: 120%; left: 0;
-  background: #fff; border: 1px solid #ccc; padding: 8px; width: 140px; font-size: 12px; z-index: 10;
-}
-.tooltip:hover .tooltiptext {
-  display: block;      /* 마우스 올리면 즉시 나타남 */
-}
+.tag { display: inline-block; margin: 2px; }
+.리니어 { background: #dbeafe; color: #0029af; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.택타일 { background: #ffeed5; color: #b46c00; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.클릭 { background: #fee2e2; color: #aa0000; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.저소음 { background: #baffd6; color: #00a941; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.자석축 { background: #e3c3ff; color: #5b00ab; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.멤브레인 { background: #c7daff; color: #0042ac; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.블루투스 { background: #c9e0ff; color: #0028ac; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.무선 { background: #ceffdf; color: #00ad42; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.유선 { background: #d3c9ff; color: #3f00a5; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.hz-1K { background: #fff4c9; color: #ab4a00; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.hz-2K { background: #fef3c7; color: #a84900; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.hz-4K { background: #ffe6ca; color: #a32e00; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.hz-8K { background: #ffe4c5; color: #ae0000; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }
+.buttons { background: #e8eeff; color: #374151; border-radius: 5px; padding: 2px 6px; font-weight: 600; font-size: 12px; }

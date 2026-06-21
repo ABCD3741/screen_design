@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div id="nav-bar">
+<div id="nav-bar"> <!--네비게이션 바-->
     <a href="#main-screen" onclick="move('main-screen')">홈</a>
     <div class="nav-right">
         <a href="#keyboard-screen" onclick="move('keyboard-screen')">키보드 스위치</a>
@@ -19,9 +19,9 @@
         <a href="#register-screen" onclick="move('register-screen')">회원가입</a>
     </div>
 </div>
-
+<!-- 메인화면 -->
 <div id="main-screen" class="screen" style="display: block; text-align: center; padding-top: 60px;">
-    <h2>장비 종합 파인더</h2>
+    <h2>장비 종합 파인더</h2> 
     <div style="margin-top: 40px; display: flex; justify-content: center; gap: 20px;">
         <button class="form-btn" style="width: 220px; padding: 15px 0; font-size: 15px;" onclick="move('keyboard-screen')">키보드 스위치 파인더</button>
         <button class="form-btn" style="width: 220px; padding: 15px 0; font-size: 15px;" onclick="move('mouse-screen')">마우스 파인더</button>
@@ -33,11 +33,11 @@
 </div>
 
 <div id="keyboard-screen" class="screen">
-    <h3>키보드 스위치 파인더</h3>
+    <h3>키보드 스위치 파인더</h3> <!--키보드 스위치 페이지-->
     <p class="screen-tip">* 키압은 자석축 기준 시작압이고 일반축 기준 입력압입니다.</p>
     
     <div class="filter-box">
-        <div class="filter-row">
+        <div class="filter-row"> <!-- 필터박스 -->
             <span class="filter-title">주요 특성</span>
             <div class="grp ">
                 <span class="저소음">저소음</span>
@@ -80,7 +80,7 @@
         </div>
     </div>
 
-    <div class="result-count" id="count-kb">0개 검색됨</div>
+    <div class="result-count" id="count-kb">0개 검색됨</div> <!--js에서 검색결과 수로 안에 값을 바꾸고 안바뀐다면(없다면) 0개라고 출력-->
     <table>
         <thead>
             <tr>
@@ -89,27 +89,27 @@
                 <th>키압</th>
             </tr>
         </thead>
-        <tbody id="tbody-kb"></tbody>
+        <tbody id="tbody-kb"></tbody> <!--여기로 리스트를 js에서 집어넣음-->
     </table>
 </div>
 
 <div id="mouse-screen" class="screen">
-    <h3>마우스 파인더</h3>
-    
+    <h3>마우스 파인더</h3> <!--마우스파인더페이지-->
+
     <div class="filter-box">
-        <div class="filter-row">
+        <div class="filter-row"> <!--필터박스-->
             <span class="filter-title">연결 방식</span>
-            <label><input type="checkbox" class="ms-conn" value="유선" onchange="runMouseFilter()"> 유선</label>
-            <label><input type="checkbox" class="ms-conn" value="무선" onchange="runMouseFilter()"> 무선</label>
-            <label><input type="checkbox" class="ms-conn" value="블루투스" onchange="runMouseFilter()"> 블루투스</label>
+            <label><input type="checkbox" class="ms-conn" value="유선" onchange="runMouseFilter()"><span class="유선">유선</span></label>
+            <label><input type="checkbox" class="ms-conn" value="무선" onchange="runMouseFilter()"><span class="무선">무선</span></label>
+            <label><input type="checkbox" class="ms-conn" value="블루투스" onchange="runMouseFilter()"><span class="블루투스">블루투스</span></label>
         </div>
         <div class="filter-row">
             <span class="filter-title tooltip">폴링레이트<span class="tooltiptext">마우스가 PC와 데이터를<br>주고 받는 빈도(Hz)입니다.</span></span>
             <label><input type="radio" name="f-hz" value="all" checked onchange="runMouseFilter()"> 무관</label>
-            <label><input type="radio" name="f-hz" value="1K" onchange="runMouseFilter()"> 1K</label>
-            <label><input type="radio" name="f-hz" value="2K" onchange="runMouseFilter()"> 2K</label>
-            <label><input type="radio" name="f-hz" value="4K" onchange="runMouseFilter()"> 4K</label>
-            <label><input type="radio" name="f-hz" value="8K" onchange="runMouseFilter()"> 8K</label>
+            <label><input type="radio" name="f-hz" value="1K" onchange="runMouseFilter()"><span class="hz-1K">1K</span></label>
+            <label><input type="radio" name="f-hz" value="2K" onchange="runMouseFilter()"><span class="hz-2K">2K</span></label>
+            <label><input type="radio" name="f-hz" value="4K" onchange="runMouseFilter()"><span class="hz-4K">4K</span></label>
+            <label><input type="radio" name="f-hz" value="8K" onchange="runMouseFilter()"><span class="hz-8K">8K</span></label>
             <label style="margin-left:10px;"><input type="checkbox" id="hz-up-cb" onchange="runMouseFilter()"> 이상</label>
         </div>
         <div class="filter-row">
@@ -128,7 +128,7 @@
         </div>
     </div>
 
-    <div class="result-count" id="count-mouse">0개 검색됨</div>
+    <div class="result-count" id="count-mouse">0개 검색됨</div> <!--마찬가지로 검색결과 수를 js에서 바꿔줌-->
     <table>
         <thead>
             <tr>
@@ -137,11 +137,11 @@
                 <th>무게</th>
             </tr>
         </thead>
-        <tbody id="tbody-mouse"></tbody>
+        <tbody id="tbody-mouse"></tbody> <!-- 마찬가지로 js에서 리스트를 집어넣음 -->
     </table>
 </div>
 
-<div id="login-screen" class="screen">
+<div id="login-screen" class="screen"> <!--로그인창-->
     <div class="form-div">
         <h4>로그인</h4>
         <label>아이디</label><input type="text">
@@ -150,7 +150,7 @@
     </div>
 </div>
 
-<div id="register-screen" class="screen">
+<div id="register-screen" class="screen"> <!--회원가입창-->
     <div class="form-div">
         <h4>회원가입</h4>
         <label>아이디</label><input type="text">
@@ -171,7 +171,7 @@
         });
     }
 
-    //복사
+    //복사기능
     function copyText(btn) {
         var str = btn.getAttribute('data-name');
         navigator.clipboard.writeText(str).then(function() {
@@ -181,7 +181,7 @@
         });
     }
 
-    //많이 쓰는 함수
+    //필터에서 무관, 포함, 제외 확인하는 함수
     function checkOpt(opt, has) {
         if (opt === 'must' && !has) return false;
         if (opt === 'never' && has) return false;
@@ -190,7 +190,7 @@
 
     // 키보드축 필터
     function runKbFilter() { //각 학목 체크되어잇는지 변수에 저장
-        var isMag = document.getElementById('mag-cb').checked; //대충 document(전체)에서 mag-cb라는 id를 가진게 체크되어있나 확인
+        var isMag = document.getElementById('mag-cb').checked; //document(전체)에서 mag-cb라는 id를 가진게 체크되어있나 확인
         var isMem = document.getElementById('mem-cb').checked;
         var sOpt = document.querySelector('input[name="f-silent"]:checked').value; //마찬가지 값확인
         var cOpt = document.querySelector('input[name="f-clicky"]:checked').value;
@@ -207,21 +207,21 @@
             var hasMag = item.tags.indexOf("자석축") !== -1;
             var hasMem = item.tags.indexOf("멤브레인") !== -1;
 
-            if (isMag && !hasMag) return;
-            if (isMem && !hasMem) return;
+            if (isMag && !hasMag) return;  //자석축 체크되어있는데 자석축이 아니면 리턴
+            if (isMem && !hasMem) return; //멤브레인
             if (!checkOpt(sOpt, hasSilent) || !checkOpt(cOpt, hasClicky) || !checkOpt(tOpt, hasTactile) || !checkOpt(lOpt, hasLinear)) return; //전체중 하나라도 안맞으면 리턴(스킵)
 
-            var wInt = parseInt(item.weight);
-            if (wSel !== "all") {
-                if (isNaN(wInt)) return;
-                if (wSel === "light" && wInt > 42) return; 
+            var wInt = parseInt(item.weight); //키압 저장
+            if (wSel !== "all") { //키압선택 무관아닐때
+                if (isNaN(wInt)) return; //키압 없으면 리턴(멤브레인)
+                if (wSel === "light" && wInt > 42) return;  // 가벼운 키압일때 42보다 크면 리턴
                 if (wSel === "normal" && (43 > wInt || wInt > 49)) return;
                 if (wSel === "heavy" && 50 > wInt) return;
             }
-            filtered.push(item);
+            filtered.push(item); //조건에 맞는것만 filtered에 넣음
         });
 
-        filtered.sort(function(x, y) {
+        filtered.sort(function(x, y) { //키압순으로 정렬
             var wX = parseInt(x.weight);
             var wY = parseInt(y.weight);
             if (isNaN(wX)) wX = 999;
@@ -292,7 +292,7 @@
             var safeName = ms.name.replace(/'/g, "&#39;");
             html += "<tr>";
             html += "<td>[" + ms.brand + "] " + ms.name + " <button class='copy-btn' data-name='" + safeName + "' onclick='copyText(this)'>복사</button></td>";
-            html += "<td>" + ms.conn.map(conn => `<span class="tag ${conn}">${conn}</span>`).join("") + ` <span class="tag hz-${ms.hz}">${ms.hz}</span>` + ` <span class="tag buttons">${ms.buttons}개</span>` + "</td>";
+            html += "<td>" + ms.conn.map(conn => `<span class="tag ${conn}">${conn}</span>`).join("") + `<span class="tag hz-${ms.hz}">${ms.hz}</span>` + `<span class="tag buttons">${ms.buttons}개</span>` + "</td>";
             html += "<td>" + ms.weight + "g</td>";
             html += "</tr>";
         });
