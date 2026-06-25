@@ -284,22 +284,22 @@
             filtered.push(m);
         });
 
-        filtered.sort(function(x, y) { return x.weight - y.weight; });
+        filtered.sort(function(x, y) { return x.weight - y.weight; }); //무게순으로 정렬
 
-        document.getElementById('count-mouse').innerText = filtered.length + "개 검색됨";
+        document.getElementById('count-mouse').innerText = filtered.length + "개 검색됨"; //count-mouse라는 id를 가진 div에 검색된 마우스 수를 넣음
         var html = "";
         filtered.forEach(function(ms) {
-            var safeName = ms.name.replace(/'/g, "&#39;");
-            html += "<tr>";
+            var safeName = ms.name.replace(/'/g, "&#39;"); //에러 방지용으로 '를 &#39;로 바꿈
+            html += "<tr>"; //html변수에 값넣기
             html += "<td>[" + ms.brand + "] " + ms.name + " <button class='copy-btn' data-name='" + safeName + "' onclick='copyText(this)'>복사</button></td>";
             html += "<td>" + ms.conn.map(conn => `<span class="tag ${conn}">${conn}</span>`).join("") + `<span class="tag hz-${ms.hz}">${ms.hz}</span>` + `<span class="tag buttons">${ms.buttons}개</span>` + "</td>";
             html += "<td>" + ms.weight + "g</td>";
             html += "</tr>";
         });
-        document.getElementById('tbody-mouse').innerHTML = html || '<tr><td colspan="3" style="text-align:center;color:#999;">조건에 맞는 마우스가 없습니다.</td></tr>';
+        document.getElementById('tbody-mouse').innerHTML = html || '<tr><td colspan="3" style="text-align:center;color:#999;">조건에 맞는 마우스가 없습니다.</td></tr>'; //html변수안에 값있으면 html을 넣고 아니면 그 뒤에있는 값 넣기
     }
 
-    //시작 필터실행
+    //시작시 필터실행
     runKbFilter();
     runMouseFilter();
 </script>
